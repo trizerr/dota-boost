@@ -13,7 +13,7 @@ export interface FormSelectProps {
     label: string;
   }[];
   onChange: (event: SelectChangeEvent) => void;
-  value: string;
+  value: string | null;
   label: string;
   key: string;
 }
@@ -72,7 +72,7 @@ const FormSelect = ({
         IconComponent={SelectIcon}
         labelId={`demo-simple-select-label-${key}`}
         id={`demo-simple-select-${key}`}
-        value={value}
+        value={value || undefined}
         label={label}
         onChange={onChange}
         MenuProps={{

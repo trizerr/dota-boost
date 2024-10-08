@@ -1,7 +1,5 @@
 import { Stack } from '@mui/system';
 import { Typography } from '@mui/material';
-import theme from '@/app/styles/theme';
-import { ORDER_FORM_HEIGHT } from '@/app/constants';
 
 const BoostBlock = () => {
   return (

@@ -4,9 +4,9 @@ import FooterItem from '@/app/components/shared/Footer/FooterItem';
 const Footer = () => {
   return (
     <Stack
-      sx={(theme) => ({
+      sx={{
         background: 'linear-gradient(to top, #655384, black)',
-      })}
+      }}
       height={'380px'}
       alignItems={'center'}
       justifyContent={'center'}

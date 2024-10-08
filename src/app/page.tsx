@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Stack } from '@mui/system';
+import { Stack } from '@mui/system';
 import Menu from '@/app/components/Menu/Menu';
 import backgroundImage from './assets/mainPageBackground.png';
 import OrderForm from '@/app/components/OrderForm/OrderForm';

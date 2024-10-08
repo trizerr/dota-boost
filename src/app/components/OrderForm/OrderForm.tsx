@@ -4,7 +4,7 @@ import { Stack } from '@mui/system';
 import { useState } from 'react';
 import MmrSlider from '@/app/components/OrderForm/MmrSlider';
 import FormSelect from '@/app/components/shared/Select/FormSelect';
-import { FormControl, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Counter from '@/app/components/shared/Counter/Counter';
 import { MAX_MMR, MIN_MMR } from '@/app/constants';
 import TurboBox from '@/app/components/OrderForm/TurboBox';
@@ -65,12 +65,14 @@ const OrderForm = () => {
       });
     };
 
+  const price = sliderValue[1] - sliderValue[0];
+
   return (
     <Stack
-      sx={(theme) => ({
+      sx={{
         backgroundColor: 'rgba(22, 22, 22, 0.9)',
         borderRadius: '36px',
-      })}
+      }}
     >
       <Stack
         sx={(theme) => ({
@@ -117,7 +119,7 @@ const OrderForm = () => {
         </Stack>
         <Stack direction={'row'} mt={'32px'} justifyContent={'space-between'}>
           <TurboBox />
-          <OrderButton price={8000} />
+          <OrderButton price={price} />
         </Stack>
       </Stack>
       <Stack

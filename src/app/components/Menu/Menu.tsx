@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Grid, Stack } from '@mui/system';
+import { Stack } from '@mui/system';
 import Image from 'next/image';
 import { Typography } from '@mui/material';
 // import { APP_TITLE } from '@/app/constants';
