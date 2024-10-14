@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@mui/material';
+import { Button, ButtonBase } from '@mui/material';
 
 const MenuItem = ({
   label,
@@ -10,16 +10,19 @@ const MenuItem = ({
   onClick: () => void;
 }) => {
   return (
-    <Button
+    <ButtonBase
       onClick={onClick}
       sx={{
         fontSize: 28,
+        //HOVER
+        '&:hover': {
+          color: '#693DC8',
+        },
       }}
       color={'primary'}
-      variant="text"
     >
       {label}
-    </Button>
+    </ButtonBase>
   );
 };
 

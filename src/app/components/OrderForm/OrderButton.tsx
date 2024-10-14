@@ -22,6 +22,7 @@ const OrderButton = ({ price }: { price: number }) => {
       <Button
         sx={{
           backgroundColor: '#693DC8',
+          borderRadius: '13px',
           borderTopLeftRadius: 0,
           borderBottomLeftRadius: 0,
         }}

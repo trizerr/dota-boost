@@ -16,6 +16,7 @@ const MmrSlider = ({
         backgroundColor: theme.palette.secondary.dark,
         borderRadius: '13px',
         px: '50px',
+        py: 5,
       })}
     >
       <Box mx={'8px'}>

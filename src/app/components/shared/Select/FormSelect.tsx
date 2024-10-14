@@ -13,9 +13,9 @@ export interface FormSelectProps {
     label: string;
   }[];
   onChange: (event: SelectChangeEvent) => void;
-  value: string | null;
+  value: string | number;
   label: string;
-  key: string;
+  uniqueKey: string;
 }
 
 const FormSelect = ({
@@ -23,7 +23,7 @@ const FormSelect = ({
   value,
   label,
   onChange,
-  key,
+  uniqueKey,
 }: FormSelectProps) => {
   return (
     <FormControl
@@ -64,14 +64,14 @@ const FormSelect = ({
             fontSize: '24px', // Label size when focused
           },
         }}
-        id={`demo-simple-select-label-${key}`}
+        id={`demo-simple-select-label-${uniqueKey}`}
       >
         {label}
       </InputLabel>
       <Select
         IconComponent={SelectIcon}
-        labelId={`demo-simple-select-label-${key}`}
-        id={`demo-simple-select-${key}`}
+        labelId={`demo-simple-select-label-${uniqueKey}`}
+        id={`demo-simple-select-${uniqueKey}`}
         value={value || undefined}
         label={label}
         onChange={onChange}

@@ -1,11 +1,15 @@
 import { Stack } from '@mui/system';
 import FooterItem from '@/app/components/shared/Footer/FooterItem';
 
-const Footer = () => {
+const Footer = ({
+  gradientColors = ['#655384', 'black'],
+}: {
+  gradientColors?: string[];
+}) => {
   return (
     <Stack
       sx={{
-        background: 'linear-gradient(to top, #655384, black)',
+        background: `linear-gradient(to top, ${gradientColors[0]}, ${gradientColors[1]})`,
       }}
       height={'380px'}
       alignItems={'center'}

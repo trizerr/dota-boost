@@ -18,17 +18,16 @@ export default function Home() {
 
       <Stack
         width={'100%'}
-        height={'1000px'}
         sx={{
           backgroundImage: `url(${backgroundImage.src})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
         }}
         position={'relative'}
       >
         <Stack
-          position={'absolute'}
           width={'100%'}
-          top={'15vh'}
+          mt={'15vh'}
           overflow={'hidden'}
           alignItems={'center'}
           justifyContent={'center'}
@@ -58,7 +57,7 @@ export default function Home() {
                 sx={(theme) => ({
                   backgroundColor: theme.palette.secondary.light,
                   opacity: 0.9,
-                  borderRadius: 30,
+                  borderRadius: '30px',
                 })}
                 flexGrow={0}
                 display={'block'}

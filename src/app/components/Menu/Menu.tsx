@@ -5,13 +5,16 @@ import Image from 'next/image';
 import { Typography } from '@mui/material';
 // import { APP_TITLE } from '@/app/constants';
 import MenuItem from '@/app/components/Menu/MenuItem';
+import { useRouter } from 'next/navigation';
 
 const Menu = () => {
+  const router = useRouter();
+
   const isAuthorized = false; //todo: implement auth
   const menu = {
     items: [
-      { label: 'Послуги', onClick: () => console.log('Home') },
-      { label: 'Робота', onClick: () => console.log('Services') },
+      { label: 'Послуги', onClick: () => router.push('/') },
+      { label: 'Робота', onClick: () => router.push('/job') },
       { label: 'Про нас', onClick: () => console.log('About') },
     ],
   };

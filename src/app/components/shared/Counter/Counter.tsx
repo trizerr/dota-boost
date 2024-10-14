@@ -1,5 +1,5 @@
 import { Stack } from '@mui/system';
-import { Button, Typography } from '@mui/material';
+import { Button, ButtonBase, Typography } from '@mui/material';
 import MinusIcon from '../../../assets/minus.png';
 import PlusIcon from '../../../assets/plus.png';
 import React from 'react';
@@ -22,11 +22,12 @@ const Counter = ({
       bgcolor={theme.palette.secondary.dark}
       paddingX={'30px'}
       borderRadius={'13px'}
-      minWidth={250}
       display={'flex'}
       flexGrow={1}
+      pt={6}
+      pb={9}
     >
-      <Typography textAlign={'center'} fontSize={16}>
+      <Typography textAlign={'center'} fontSize={16} pb={5}>
         {label}
       </Typography>
       <Stack
@@ -36,7 +37,7 @@ const Counter = ({
         justifyContent={'space-between'}
         alignItems={'center'}
       >
-        <Button
+        <ButtonBase
           onClick={onMinus}
           sx={{
             width: '23px',
@@ -44,11 +45,11 @@ const Counter = ({
           }}
         >
           <Image src={MinusIcon} alt={'Minus'} />
-        </Button>
+        </ButtonBase>
         <Typography lineHeight={'32px'} fontWeight={'bold'} fontSize={'32px'}>
           {value}
         </Typography>
-        <Button
+        <ButtonBase
           sx={{
             width: '23px',
             minWidth: 0,
@@ -56,7 +57,7 @@ const Counter = ({
           onClick={onPlus}
         >
           <Image src={PlusIcon} alt={'Plus'} />
-        </Button>
+        </ButtonBase>
       </Stack>
     </Stack>
   );

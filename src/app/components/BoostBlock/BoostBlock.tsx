@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 
 const BoostBlock = () => {
   return (
-    <Stack bgcolor={'black'} pt={'15vh'} alignItems={'center'} pb={'70px'}>
+    <Stack bgcolor={'black'} pt={'53px'} alignItems={'center'} pb={'70px'}>
       <Stack width={'64vw'}>
         <Typography fontSize={'36px'} lineHeight={'36px'} fontWeight={'bold'}>
           Буст MMR у Dota 2

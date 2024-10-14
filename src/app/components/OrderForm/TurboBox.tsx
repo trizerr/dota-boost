@@ -11,23 +11,7 @@ const TurboBox = () => {
       padding={'18px 16px'}
       alignItems={'center'}
     >
-      <Checkbox
-        sx={{
-          color: theme.palette.secondary.light,
-          borderRadius: '13px',
-          // height: '65px',
-          '& .MuiSvgIcon-root': {
-            width: '65px',
-            height: '65px',
-          },
-          '&.MuiButtonBase-root': {
-            padding: 0,
-          },
-          '&.MuiCheckbox-root': {
-            padding: 0,
-          },
-        }}
-      />
+      <Checkbox />
       <Typography fontWeight={'bold'} fontSize={'32px'} pl={'16px'}>
         Турбо режим
       </Typography>

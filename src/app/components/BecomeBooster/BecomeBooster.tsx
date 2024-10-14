@@ -22,14 +22,14 @@ const BecomeBooster = () => {
             borderRadius={'30px'}
             alignItems={'center'}
           >
-            <Typography fontSize={'70px'} fontWeight={'bold'}>
+            <Typography
+              fontSize={'70px'}
+              textAlign={'center'}
+              fontWeight={'bold'}
+            >
               Ставай бустером уже зараз!
             </Typography>
-            <Typography
-              textAlign={'center'}
-              fontSize={'48px'}
-              lineHeight={'48px'}
-            >
+            <Typography mt={17} textAlign={'center'} fontSize={'48px'}>
               Починай грати та отримувати <br /> за це гроші
             </Typography>
           </Stack>
