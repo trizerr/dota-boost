@@ -1,5 +1,5 @@
 'use client';
-import { Grid, Stack } from '@mui/system';
+import { Stack } from '@mui/system';
 import ItemWithLabel from '@/app/components/ItemWithLabel/ItemWithLabel';
 import { Input, Typography } from '@mui/material';
 import Image from 'next/image';
@@ -21,6 +21,7 @@ const OrderConfirmation = ({
   price: string;
   isTurbo: boolean;
 }) => {
+  console.log(isTurbo);
   return (
     <Stack direction={'row'}>
       <Stack
@@ -152,7 +153,7 @@ const OrderConfirmation = ({
         pb={18}
       >
         <Typography fontSize={32} fontWeight={'bold'}>
-          Контакт для зв'язку
+          Контакт для зв&#39;язку
         </Typography>
         <Stack direction={'row'} mt={24}>
           <Typography fontSize={20}>Телефон</Typography>

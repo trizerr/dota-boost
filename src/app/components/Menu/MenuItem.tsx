@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, ButtonBase } from '@mui/material';
+import { ButtonBase } from '@mui/material';
 
 const MenuItem = ({
   label,

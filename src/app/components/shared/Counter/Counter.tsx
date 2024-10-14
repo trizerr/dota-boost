@@ -1,5 +1,5 @@
 import { Stack } from '@mui/system';
-import { Button, ButtonBase, Typography } from '@mui/material';
+import { ButtonBase, Typography } from '@mui/material';
 import MinusIcon from '../../../assets/minus.png';
 import PlusIcon from '../../../assets/plus.png';
 import React from 'react';

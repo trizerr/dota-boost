@@ -5,12 +5,11 @@ import { Button, Checkbox, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import BackButton from '../assets/backButton.png';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import OrderConfirmation from '@/app/order/components/OrderConfirmation/OrderConfirmation';
-import theme from '@/app/styles/theme';
+import { useSearchParams } from 'next/navigation';
 import Menu from '@/app/components/Menu/Menu';
-import ContactBox from '@/app/components/ContactBox/ContactBox';
 import Footer from '@/app/components/shared/Footer/Footer';
+import ContactBox from '@/app/components/ContactBox/ContactBox';
+import OrderConfirmation from '@/app/order/components/OrderConfirmation/OrderConfirmation';
 
 const OrderPage = () => {
   const searchParams = useSearchParams();
@@ -56,6 +55,7 @@ const OrderPage = () => {
               service={service}
               server={server}
               price={price}
+              isTurbo={false} //todo
             />
             <Stack
               direction={'row'}
