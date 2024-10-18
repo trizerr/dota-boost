@@ -6,6 +6,7 @@ import { Typography } from '@mui/material';
 // import { APP_TITLE } from '@/app/constants';
 import MenuItem from '@/app/components/Menu/MenuItem';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Menu = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const Menu = () => {
     items: [
       { label: 'Послуги', onClick: () => router.push('/') },
       { label: 'Робота', onClick: () => router.push('/job') },
-      { label: 'Про нас', onClick: () => console.log('About') },
+      { label: 'Про нас', onClick: () => router.push('/about') },
     ],
   };
 
@@ -24,6 +25,7 @@ const Menu = () => {
       direction="row"
       alignItems={'center'}
       p={'4px'}
+      component={'header'}
       justifyContent={'space-between'}
       sx={(theme) => ({
         background: `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.purple.main})`,
@@ -31,19 +33,32 @@ const Menu = () => {
       })}
     >
       <Stack flexDirection={'row'} alignItems={'center'}>
-        <Image src={require('../../assets/logo.png')} alt={'logo'} />
-        <Typography fontSize={28} fontWeight={700} lineHeight={1}>
-          Dota 2 <br />
-          Boosting service
-        </Typography>
+        <Link href={'/'}>
+          <Image src={require('../../assets/logo.png')} alt={'logo'} />
+        </Link>
       </Stack>
 
       <Stack
         sx={{
           flexGrow: 1,
+          height: '50px',
         }}
         direction="row"
+        position={'relative'}
       >
+        <Stack
+          position={'absolute'}
+          height={'100%'}
+          alignItems={'center'}
+          left={0}
+          top={0}
+          bottom={0}
+        >
+          <Typography fontSize={28} fontWeight={700} lineHeight={1}>
+            Dota 2 <br />
+            Boosting service
+          </Typography>
+        </Stack>
         <Stack
           sx={{
             flexGrow: 1,

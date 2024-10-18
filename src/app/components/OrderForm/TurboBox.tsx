@@ -1,8 +1,15 @@
+'use client';
 import { Stack } from '@mui/system';
 import theme from '@/app/styles/theme';
 import { Checkbox, Typography } from '@mui/material';
 
-const TurboBox = () => {
+const TurboBox = ({
+  setIsTurbo,
+  value,
+}: {
+  value: boolean;
+  setIsTurbo: (value: boolean) => void;
+}) => {
   return (
     <Stack
       bgcolor={theme.palette.secondary.dark}
@@ -11,7 +18,12 @@ const TurboBox = () => {
       padding={'18px 16px'}
       alignItems={'center'}
     >
-      <Checkbox />
+      <Checkbox
+        value={value}
+        onClick={() => {
+          setIsTurbo(!value);
+        }}
+      />
       <Typography fontWeight={'bold'} fontSize={'32px'} pl={'16px'}>
         Турбо режим
       </Typography>

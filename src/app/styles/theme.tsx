@@ -35,9 +35,14 @@ const theme = createTheme({
           paddingRight: 24,
           paddingLeft: 24,
           textDecoration: 'none !important',
+          borderBottom: '0px !important',
           borderRadius: 15,
           fontSize: 30,
           '&:hover': {
+            textDecoration: 'none !important',
+            borderBottom: 0,
+          },
+          '&:focus': {
             textDecoration: 'none !important',
           },
         },
@@ -45,6 +50,7 @@ const theme = createTheme({
     },
     MuiButtonBase: {
       defaultProps: {
+        component: 'button',
         // The props to change the default for.
         disableRipple: true, // No more ripple, on the whole application 💣!
       },

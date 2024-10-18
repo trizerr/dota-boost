@@ -18,8 +18,16 @@ const OrderPage = () => {
   const service = searchParams.get('service') as string;
   const server = searchParams.get('server') as string;
   const price = searchParams.get('price') as string;
+  const isTurboParam = searchParams.get('isTurbo') as string;
+  const isTurbo = isTurboParam === 'true';
 
-  console.log('startMmr', startMmr);
+  const turboPrice = isTurbo ? 0.2 * parseInt(price) : 0;
+
+  const totalPrice = parseInt(price) + turboPrice;
+  const totalDays = Math.ceil(
+    ((parseInt(endMmr) - parseInt(startMmr)) / 285) * (isTurbo ? 0.8 : 1)
+  );
+
   return (
     <Stack>
       <Menu />
@@ -55,7 +63,10 @@ const OrderPage = () => {
               service={service}
               server={server}
               price={price}
-              isTurbo={false} //todo
+              isTurbo={isTurbo}
+              turboPrice={turboPrice}
+              totalPrice={totalPrice}
+              totalDays={totalDays}
             />
             <Stack
               direction={'row'}
@@ -88,7 +99,7 @@ const OrderPage = () => {
                 borderBottomLeftRadius: 0,
                 width: '35vw',
                 paddingY: 24,
-                borderRadius: 30,
+                borderRadius: '30px',
                 mt: 44,
                 mb: 94,
               }}

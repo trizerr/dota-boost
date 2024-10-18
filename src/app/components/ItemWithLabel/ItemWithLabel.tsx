@@ -23,7 +23,7 @@ const ItemWithLabel = ({
       <Typography color={'white'} fontSize={16}>
         {label}
       </Typography>
-      <Typography color={'white'} fontSize={35} fontWeight={'bold'}>
+      <Typography color={'white'} fontSize={32} fontWeight={'bold'}>
         {value}
       </Typography>
     </Stack>

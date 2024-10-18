@@ -12,13 +12,19 @@ const OrderConfirmation = ({
   service,
   server,
   price,
+  turboPrice,
+  totalPrice,
   isTurbo,
+  totalDays,
 }: {
   startMmr: string;
   endMmr: string;
   service: string;
   server: string;
   price: string;
+  totalDays: number;
+  turboPrice: number;
+  totalPrice: number;
   isTurbo: boolean;
 }) => {
   console.log(isTurbo);
@@ -104,7 +110,7 @@ const OrderConfirmation = ({
             Турбо режим
           </Typography>
           <Typography fontSize={32} color={'white'}>
-            {price}
+            {isTurbo ? turboPrice : 0}
           </Typography>
         </Stack>
         <Stack mt={30} width={'100%'} bgcolor={'#161616'} height={4} />
@@ -128,7 +134,7 @@ const OrderConfirmation = ({
             alignItems={'center'}
             justifyContent={'center'}
           >
-            <Typography fontSize={32}>22 дні</Typography>
+            <Typography fontSize={32}>{totalDays} дні</Typography>
           </Stack>
           <Stack my={6} width={3} bgcolor={'#242424'} />
           <Stack
@@ -137,7 +143,7 @@ const OrderConfirmation = ({
             alignItems={'center'}
             justifyContent={'center'}
           >
-            <Typography fontSize={32}>9600 грн</Typography>
+            <Typography fontSize={32}>{totalPrice} грн</Typography>
           </Stack>
         </Stack>
       </Stack>
@@ -155,11 +161,34 @@ const OrderConfirmation = ({
         <Typography fontSize={32} fontWeight={'bold'}>
           Контакт для зв&#39;язку
         </Typography>
-        <Stack direction={'row'} mt={24}>
-          <Typography fontSize={20}>Телефон</Typography>
+        <Stack direction={'row'} mt={24} mb={50}>
           <Input
             sx={{
               marginLeft: 14,
+              fontSize: 20,
+              lineHeight: '20px',
+              padding: 12,
+              height: 42,
+              color: 'white',
+              backgroundColor: '#242424',
+              //disabled: true,
+              '& .Mui-disabled': {
+                color: 'white ',
+                '-webkit-text-fill-color': 'white !important',
+              },
+            }}
+            disabled={true}
+            value={'Телефон'}
+            placeholder={'+380'}
+          />
+          <Input
+            sx={{
+              marginLeft: 14,
+              fontSize: 20,
+              backgroundColor: '#242424',
+              lineHeight: '20px',
+              padding: 12,
+              height: 42,
             }}
             placeholder={'+380'}
           />

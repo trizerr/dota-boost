@@ -10,6 +10,7 @@ import BecomeBooster from '@/app/components/BecomeBooster/BecomeBooster';
 import BoostBenefits from '@/app/components/BoostBenefits/BoostBenefits';
 import VideoExample from '@/app/components/VideoExample/VideoExample';
 import Footer from '@/app/components/shared/Footer/Footer';
+import Map from '@/app/components/Map/Map';
 
 export default function Home() {
   return (
@@ -80,8 +81,17 @@ export default function Home() {
 
       <BoostBenefits />
 
-      <Stack pb={'156px'}>
-        <VideoExample />
+      <VideoExample />
+
+      <Stack pb={'156px'} alignItems={'center'}>
+        <Stack width={'64vw'}>
+          <Typography fontSize={45} color={'white'} paddingTop={200}>
+            Також у нас є фізичний офіс, де наші спеціалісти можуть надавати
+            свої послуги і де ви можете взяти консультацію. Офіс знаходиться за
+            адресою: вулиця Степана Бандери, 12, Львів
+          </Typography>
+          <Map />
+        </Stack>
       </Stack>
 
       <Footer />

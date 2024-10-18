@@ -41,6 +41,7 @@ const OrderForm = () => {
   const [sliderValue, setSliderValue] = useState<number[]>([MIN_MMR, MAX_MMR]);
   const [service, setService] = useState<number | string>(1);
   const [server, setServer] = useState<number | string>(1);
+  const [isTurbo, setIsTurbo] = useState(false);
 
   const onMmrChange =
     ({ isStart, delta }: { isStart: boolean; delta: number }) =>
@@ -139,7 +140,7 @@ const OrderForm = () => {
           spacing={16}
           justifyContent={'space-between'}
         >
-          <TurboBox />
+          <TurboBox value={isTurbo} setIsTurbo={setIsTurbo} />
           <Link
             href={{
               pathname: '/order',
@@ -150,6 +151,7 @@ const OrderForm = () => {
                 service: serviceItems[service]?.label,
                 // @ts-ignore
                 server: serverItems[server]?.label,
+                isTurbo: isTurbo,
                 price,
               },
             }}
