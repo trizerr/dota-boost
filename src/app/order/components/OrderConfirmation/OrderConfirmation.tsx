@@ -206,6 +206,9 @@ const OrderConfirmation = ({
             fontSize={32}
             bgcolor={'#242424'}
             py={20}
+            sx={{
+              cursor: 'pointer',
+            }}
             px={15}
           >
             Оплатити карткою онлайн
@@ -216,6 +219,9 @@ const OrderConfirmation = ({
             alignItems={'center'}
             px={15}
             py={6}
+            sx={{
+              cursor: 'pointer',
+            }}
             bgcolor={'#242424'}
           >
             <Typography fontSize={32}>Apple Pay</Typography>
@@ -231,6 +237,7 @@ const OrderConfirmation = ({
             sx={{
               borderBottomRightRadius: 15,
               borderBottomLeftRadius: 15,
+              cursor: 'pointer',
             }}
           >
             <Typography fontSize={32}>Оплатити криптою</Typography>

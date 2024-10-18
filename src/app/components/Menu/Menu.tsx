@@ -17,6 +17,7 @@ const Menu = () => {
       { label: 'Послуги', onClick: () => router.push('/') },
       { label: 'Робота', onClick: () => router.push('/job') },
       { label: 'Про нас', onClick: () => router.push('/about') },
+      { label: 'Анімації', onClick: () => router.push('/animation') },
     ],
   };
 
