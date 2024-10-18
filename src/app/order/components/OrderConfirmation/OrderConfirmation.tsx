@@ -202,13 +202,11 @@ const OrderConfirmation = ({
             sx={{
               borderTopRightRadius: 15,
               borderTopLeftRadius: 15,
+              cursor: 'pointer',
             }}
             fontSize={32}
             bgcolor={'#242424'}
             py={20}
-            sx={{
-              cursor: 'pointer',
-            }}
             px={15}
           >
             Оплатити карткою онлайн
